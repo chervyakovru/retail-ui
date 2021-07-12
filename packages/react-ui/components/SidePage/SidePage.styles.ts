@@ -1,6 +1,8 @@
 import { is8pxTheme } from '../../lib/theming/ThemeHelpers';
 import { css, cssName, memoizeStyle } from '../../lib/theming/Emotion';
 import { Theme } from '../../lib/theming/Theme';
+import { resetButton } from '../../lib/styles/Mixins';
+
 
 const styles = {
   root() {
@@ -184,11 +186,36 @@ const styles = {
   },
 
   closeIcon(t: Theme) {
+    const padding = parseInt(t.sidePageCloseButtonPadding);
     return css`
-      display: inline-block;
-      height: ${t.sidePageCloseIconSize};
-      width: ${t.sidePageCloseIconSize};
-      line-height: 0;
+      ${resetButton()};
+      position: absolute;
+      display: flex;
+      right: ${padding}px;
+      top: ${padding}px;
+      background: none;
+      background: transparent;
+      cursor: pointer;
+      color: ${t.sidePageCloseButtonColor};
+      text-align: center;
+      vertical-align: middle;
+      padding: ${t.sidePageCloseButtonClickAreaX} !important;
+      margin: -${t.sidePageCloseButtonClickAreaX} !important;
+
+      &:focus,
+      &:hover {
+        color: ${t.sidePageCloseButtonHoverColor};
+      }
+
+      &:focus {
+        outline: 2px solid ${t.borderColorFocus};
+      }
+
+      & > svg {
+        width: ${t.sidePageCloseIconSize};
+        height: ${t.sidePageCloseIconSize};
+        box-sizing: content-box;
+      }
     `;
   },
 
