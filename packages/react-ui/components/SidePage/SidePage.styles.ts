@@ -167,7 +167,7 @@ const styles = {
       background: none;
       background: transparent;
       cursor: pointer;
-      color: ${t.modalCloseButtonColor};
+      color: ${t.sidePageCloseButtonColor};
       text-align: center;
       vertical-align: middle;
       padding: ${t.sidePageCloseButtonClickAreaX} !important;
@@ -195,15 +195,6 @@ const styles = {
       background: ${t.sidePageFooterPanelBg} !important;
       padding: ${t.sidePageFooterPanelPaddingTop} ${t.sidePagePaddingRight} ${t.sidePageFooterPanelPaddingBottom}
         ${t.sidePagePaddingLeft};
-    `;
-  },
-
-  closeIcon(t: Theme) {
-    return css`
-      display: inline-block;
-      height: ${t.sidePageCloseIconSize};
-      width: ${t.sidePageCloseIconSize};
-      line-height: 0;
     `;
   },
 
