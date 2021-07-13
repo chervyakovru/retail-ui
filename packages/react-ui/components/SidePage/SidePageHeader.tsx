@@ -100,13 +100,13 @@ export class SidePageHeader extends React.Component<SidePageHeaderProps, SidePag
     <SidePageContext.Consumer>
       {({ requestClose }) => (
         <button
-          className={cn(jsStyles.closeIcon(this.theme), {
-            [jsStyles.fixed(this.theme)]: fixed,
-          })}
+          className={cn(jsStyles.close(this.theme),
+            {[jsStyles.fixed(this.theme)]: fixed,
+            })}
           onClick={requestClose}
           data-tid="SidePage__close"
         >
-            <CrossIcon />
+          <CrossIcon />
         </button>
       )}
     </SidePageContext.Consumer>

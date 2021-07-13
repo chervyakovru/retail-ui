@@ -161,42 +161,13 @@ const styles = {
 
   close(t: Theme) {
     return css`
-      color: ${t.sidePageCloseButtonColor};
-      cursor: pointer;
-      position: absolute;
-      right: ${t.sidePageCloseButtonPadding};
-      text-align: center;
-      text-decoration: none;
-      width: ${t.sidePageCloseIconSize};
-      padding: 0 ${t.sidePageCloseButtonClickAreaX};
-      margin: 0 -${t.sidePageCloseButtonClickAreaX};
-
-      &:hover {
-        color: ${t.sidePageCloseButtonHoverColor};
-      }
-    `;
-  },
-
-  panel(t: Theme) {
-    return css`
-      background: ${t.sidePageFooterPanelBg} !important;
-      padding: ${t.sidePageFooterPanelPaddingTop} ${t.sidePagePaddingRight} ${t.sidePageFooterPanelPaddingBottom}
-        ${t.sidePagePaddingLeft};
-    `;
-  },
-
-  closeIcon(t: Theme) {
-    const padding = parseInt(t.sidePageCloseButtonPadding);
-    return css`
       ${resetButton()};
       position: absolute;
-      display: flex;
-      right: ${padding}px;
-      top: ${padding}px;
+      right: ${t.sidePageCloseButtonPadding};
       background: none;
       background: transparent;
       cursor: pointer;
-      color: ${t.sidePageCloseButtonColor};
+      color: ${t.modalCloseButtonColor};
       text-align: center;
       vertical-align: middle;
       padding: ${t.sidePageCloseButtonClickAreaX} !important;
@@ -216,6 +187,23 @@ const styles = {
         height: ${t.sidePageCloseIconSize};
         box-sizing: content-box;
       }
+    `;
+  },
+
+  panel(t: Theme) {
+    return css`
+      background: ${t.sidePageFooterPanelBg} !important;
+      padding: ${t.sidePageFooterPanelPaddingTop} ${t.sidePagePaddingRight} ${t.sidePageFooterPanelPaddingBottom}
+        ${t.sidePagePaddingLeft};
+    `;
+  },
+
+  closeIcon(t: Theme) {
+    return css`
+      display: inline-block;
+      height: ${t.sidePageCloseIconSize};
+      width: ${t.sidePageCloseIconSize};
+      line-height: 0;
     `;
   },
 
