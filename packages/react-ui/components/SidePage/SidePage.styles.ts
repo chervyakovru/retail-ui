@@ -161,8 +161,21 @@ const styles = {
   close(t: Theme) {
     return css`
       ${resetButton()};
+      // position: absolute;
+      // right: ${t.sidePageCloseButtonPadding};
+      // background: none;
+      // background: transparent;
+      // cursor: pointer;
+      // color: ${t.sidePageCloseButtonColor};
+      // text-align: center;
+      // vertical-align: middle;
+      // padding: ${t.sidePageCloseButtonClickAreaX} !important;
+      // margin: -${t.sidePageCloseButtonClickAreaX} !important;
+
       position: absolute;
+      display: flex;
       right: ${t.sidePageCloseButtonPadding};
+      //top: ${t.sidePageCloseButtonPadding};
       background: none;
       background: transparent;
       cursor: pointer;
@@ -170,8 +183,7 @@ const styles = {
       text-align: center;
       vertical-align: middle;
       padding: ${t.sidePageCloseButtonClickAreaX} !important;
-      margin: -${t.sidePageCloseButtonClickAreaX} !important;
-
+      margin: 0 -${t.sidePageCloseButtonClickAreaX} !important;
       &:focus,
       &:hover {
         color: ${t.sidePageCloseButtonHoverColor};
