@@ -132,6 +132,13 @@ const styles = {
     `;
   },
 
+  buttonFixed(t: Theme) {
+    return css`
+      position: absolute;
+      top: ${t.sidePageCloseButtonFixedPadding} !important;
+    `;
+  },
+
   backgroundGray(t: Theme) {
     return css`
       background: ${t.sidePageBackingBg};
@@ -164,6 +171,7 @@ const styles = {
       position: absolute;
       display: flex;
       right: ${t.sidePageCloseButtonPadding};
+      top: ${t.sidePageCloseButtonPadding};
       background: none;
       background: transparent;
       cursor: pointer;
@@ -171,7 +179,7 @@ const styles = {
       text-align: center;
       vertical-align: middle;
       padding: ${t.sidePageCloseButtonClickAreaX} !important;
-      margin: 4px -${t.sidePageCloseButtonClickAreaX} !important;
+      margin: -${t.sidePageCloseButtonClickAreaX} !important;
       &:focus,
       &:hover {
         color: ${t.sidePageCloseButtonHoverColor};
