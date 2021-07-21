@@ -132,6 +132,13 @@ const styles = {
     `;
   },
 
+  buttonReadyToFix(t: Theme) {
+    return css`
+      position: absolute;
+      top: ${t.sidePageCloseButtonReadyToFixPadding} !important;
+    `;
+  },
+
   buttonFixed(t: Theme) {
     return css`
       position: absolute;

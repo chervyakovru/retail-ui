@@ -101,23 +101,26 @@ export class SidePageHeader extends React.Component<SidePageHeaderProps, SidePag
     );
   };
 
-  private renderCloseContent = (fixed: boolean) => (
-    <SidePageContext.Consumer>
-      {({ requestClose }) => (
-        <button
-          className={cn(
-            jsStyles.close(this.theme),
-            { [jsStyles.fixed(this.theme)]: fixed },
-            { [jsStyles.buttonFixed(this.theme)]: this.state.isReadyToFix },
-          )}
-          onClick={requestClose}
-          data-tid="SidePage__close"
-        >
-          <CrossIcon />
-        </button>
-      )}
-    </SidePageContext.Consumer>
-  );
+  private renderCloseContent = (fixed: boolean) => {
+    return (
+      <SidePageContext.Consumer>
+        {({ requestClose }) => (
+          <button
+            className={cn(
+              jsStyles.close(this.theme),
+              { [jsStyles.fixed(this.theme)]: fixed },
+              { [jsStyles.buttonFixed(this.theme)]: fixed},
+              { [jsStyles.buttonReadyToFix(this.theme)]: this.state.isReadyToFix},
+            )}
+            onClick={requestClose}
+            data-tid="SidePage__close"
+          >
+            <CrossIcon />
+          </button>
+        )}
+      </SidePageContext.Consumer>
+    );
+  };
 
   private renderClose = () => {
     const stickyOffset = parseInt(this.theme.sidePageHeaderStickyOffset);

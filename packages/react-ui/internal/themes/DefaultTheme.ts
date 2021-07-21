@@ -630,7 +630,8 @@ export class DefaultTheme {
   public static sidePageHeaderFixedPaddingY = '13px';
   public static sidePageHeaderStickyOffset = '11px';
   public static sidePageCloseButtonPadding = '36px';
-  public static sidePageCloseButtonFixedPadding = '20px';
+  public static sidePageCloseButtonFixedPadding = '10px';
+  public static sidePageCloseButtonReadyToFixPadding = '20px';
   public static sidePageCloseButtonLegacyPaddingLeft = '37px';
   public static sidePageFooterPanelPaddingTop = '20px';
   public static sidePageFooterPanelPaddingBottom = '20px';
