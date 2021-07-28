@@ -109,8 +109,8 @@ export class SidePageHeader extends React.Component<SidePageHeaderProps, SidePag
             className={cx(
               styles.close(this.theme),
               { [styles.fixed(this.theme)]: fixed },
-              { [styles.buttonFixed(this.theme)]: fixed},
-              { [styles.buttonReadyToFix(this.theme)]: this.state.isReadyToFix},
+              { [styles.buttonFixed(this.theme)]: fixed },
+              { [styles.buttonReadyToFix(this.theme)]: this.state.isReadyToFix },
             )}
             onClick={requestClose}
             data-tid="SidePage__close"
