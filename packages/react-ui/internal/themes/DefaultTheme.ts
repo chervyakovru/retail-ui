@@ -1040,9 +1040,6 @@ export class DefaultTheme {
   public static get checkboxTextColorDisabled() {
     return this.textColorDisabled;
   }
-  public static get checkboxIndeterminateBg() {
-    return this.textColorDefault;
-  }
   public static get checkboxShadowDisabled() {
     return `0 0 0 ${this.checkboxBorderWidth} rgba(0, 0, 0, 0.15)`;
   }
@@ -1094,9 +1091,6 @@ export class DefaultTheme {
   }
   public static get checkboxBgDisabled() {
     return this.bgDisabled;
-  }
-  public static get checkboxBoxIndeterminateBg() {
-    return this.checkboxBg;
   }
   public static get checkboxCheckedHoverBg() {
     return this.checkboxHoverBg;
@@ -1245,6 +1239,9 @@ export class DefaultTheme {
   public static radioCheckedBulletColor = '#404040';
   public static get radioCheckedHoverBgColor() {
     return this.radioHoverBg;
+  }
+  public static get radioDisabledBg() {
+    return this.bgDisabled;
   }
   public static get radioDisabledShadow() {
     return `0 0 0 ${this.radioBorderWidth} rgba(0, 0, 0, 0.15)`;
