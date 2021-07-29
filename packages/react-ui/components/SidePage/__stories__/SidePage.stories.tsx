@@ -866,7 +866,7 @@ export const SidePageWithChildrenFromOtherComponent: Story = () => {
           toggle panel
         </Button>
       </div>
-      <SidePage disableFocusLock={true}>
+      <SidePage>
         {hasHeader && <SidePageHeader />}
         <SidePageBody />
         {hasFooter && <SidePageFooter hasPanel={hasPanel} />}
