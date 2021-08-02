@@ -141,14 +141,14 @@ export const styles = memoizeStyle({
   buttonReadyToFix(t: Theme) {
     return css`
       position: absolute;
-      top: ${t.sidePageCloseButtonReadyToFixPadding} !important;
+      top: ${t.sidePageCloseButtonReadyToFixPadding};
     `;
   },
 
   buttonFixed(t: Theme) {
     return css`
       position: absolute;
-      top: ${t.sidePageCloseButtonFixedPadding} !important;
+      top: ${t.sidePageCloseButtonFixedPadding};
     `;
   },
 
@@ -185,8 +185,8 @@ export const styles = memoizeStyle({
       color: ${t.sidePageCloseButtonColor};
       text-align: center;
       vertical-align: middle;
-      padding: ${t.sidePageCloseButtonClickAreaX} !important;
-      margin: -${t.sidePageCloseButtonClickAreaX} !important;
+      padding: ${t.sidePageCloseButtonClickAreaX};
+      margin: -${t.sidePageCloseButtonClickAreaX};
       &:focus,
       &:hover {
         color: ${t.sidePageCloseButtonHoverColor};

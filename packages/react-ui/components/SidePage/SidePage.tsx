@@ -61,6 +61,10 @@ export interface SidePageProps extends CommonProps {
    */
   disableAnimations?: boolean;
 
+  /**
+   *   фокус-лок работает только при заблокированном фоне
+   *   (blockBackground=true)
+   */
   disableFocusLock: boolean;
 }
 
@@ -191,21 +195,13 @@ export class SidePage extends React.Component<SidePageProps, SidePageState> {
             })}
             style={this.getSidebarStyle()}
           >
-            {blockBackground ? (
-              <FocusLock disabled={disableFocusLock} autoFocus={false}>
-                <div ref={(_) => (this.layoutRef = _)} className={styles.layout()}>
-                  <SidePageContext.Provider value={this.getSidePageContextProps()}>
-                    {this.props.children}
-                  </SidePageContext.Provider>
-                </div>
-              </FocusLock>
-            ) : (
+            <FocusLock disabled={disableFocusLock || !blockBackground} autoFocus={false}>
               <div ref={(_) => (this.layoutRef = _)} className={styles.layout()}>
                 <SidePageContext.Provider value={this.getSidePageContextProps()}>
                   {this.props.children}
                 </SidePageContext.Provider>
               </div>
-            )}
+            </FocusLock>
           </div>
         </RenderLayer>
       </ZIndex>
