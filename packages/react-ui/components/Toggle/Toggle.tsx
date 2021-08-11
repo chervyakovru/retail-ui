@@ -111,6 +111,7 @@ export class Toggle extends React.Component<ToggleProps, ToggleState> {
     const containerClassNames = cx(styles.container(this.theme), {
       [styles.containerDisabled(this.theme)]: !!disabled,
       [globalClasses.container]: true,
+      [globalClasses.containerDisabled]: !!disabled,
       [globalClasses.containerLoading]: loading,
     });
 
